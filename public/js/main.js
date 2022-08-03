@@ -77,18 +77,24 @@ var main = new function() {
       }
 
       let menuItems = [
-        {html: 'Deutsch', line: false, callback: function() { setLang('de'); }},
-        {html: 'Ελληνικά', line: false, callback: function() { setLang('el'); }},
+        {html: 'Việt Nam', line: false, callback: function() { setLang('vi'); }},
         {html: 'English', line: false, callback: function() { setLang('en'); }},
-        {html: 'Español', line: false, callback: function() { setLang('es'); }},
-        {html: 'Français', line: false, callback: function() { setLang('fr'); }},
-        {html: 'עברית', line: false, callback: function() { setLang('he'); }},
-        {html: 'Nederlands', line: false, callback: function() { setLang('nl'); }},
-        {html: 'Português', line: false, callback: function() { setLang('pt'); }},
-        {html: 'tlhIngan', line: false, callback: function() { setLang('tlh'); }},
-        {html: 'Русский', line: false, callback: function() { setLang('ru'); }},
-        {html: 'Magyar', line: false, callback: function() { setLang('hu'); }},
       ];
+
+      // let menuItems = [
+      //   {html: 'English', line: false, callback: function() { setLang('en'); }},
+      //   {html: 'Việt Nam', line: false, callback: function() { setLang('vi'); }},
+      //   {html: 'Deutsch', line: false, callback: function() { setLang('de'); }},
+      //   {html: 'Ελληνικά', line: false, callback: function() { setLang('el'); }},
+      //   {html: 'Español', line: false, callback: function() { setLang('es'); }},
+      //   {html: 'Français', line: false, callback: function() { setLang('fr'); }},
+      //   {html: 'עברית', line: false, callback: function() { setLang('he'); }},
+      //   {html: 'Nederlands', line: false, callback: function() { setLang('nl'); }},
+      //   {html: 'Português', line: false, callback: function() { setLang('pt'); }},
+      //   {html: 'tlhIngan', line: false, callback: function() { setLang('tlh'); }},
+      //   {html: 'Русский', line: false, callback: function() { setLang('ru'); }},
+      //   {html: 'Magyar', line: false, callback: function() { setLang('hu'); }},
+      // ];
 
       menuDropDown(self.$languageMenu, menuItems, {className: 'languageMenuDropDown', align: 'right'});
     }
@@ -256,14 +262,18 @@ var main = new function() {
       $('.menuDropDown').remove();
       e.stopPropagation();
 
+      // let menuItems = [
+      //   {html: 'Wiki', line: false, callback: function() { self.openPage('https://github.com/QuirkyCort/gears/wiki'); }},
+      //   {html: 'Github', line: false, callback: function() { self.openPage('https://github.com/QuirkyCort/gears'); }},
+      //   {html: 'URL Generator', line: false, callback: function() { self.openPage('genURL.html'); }},
+      //   {html: i18n.get('#main-whats_new#'), line: false, callback: function() { self.showWhatsNew(true); }},
+      //   {html: i18n.get('#main-privacy#'), line: false, callback: function() { self.openPage('privacy.html'); }},
+      //   {html: i18n.get('#main-about#'), line: true, callback: self.openAbout },
+      //   {html: i18n.get('#main-display_fps#'), line: false, callback: simPanel.toggleFPS }
+      // ];
       let menuItems = [
-        {html: 'Wiki', line: false, callback: function() { self.openPage('https://github.com/QuirkyCort/gears/wiki'); }},
-        {html: 'Github', line: false, callback: function() { self.openPage('https://github.com/QuirkyCort/gears'); }},
-        {html: 'URL Generator', line: false, callback: function() { self.openPage('genURL.html'); }},
-        {html: i18n.get('#main-whats_new#'), line: false, callback: function() { self.showWhatsNew(true); }},
-        {html: i18n.get('#main-privacy#'), line: false, callback: function() { self.openPage('privacy.html'); }},
-        {html: i18n.get('#main-about#'), line: true, callback: self.openAbout },
-        {html: i18n.get('#main-display_fps#'), line: false, callback: simPanel.toggleFPS }
+        {html: 'Docs', line: false, callback: function() { self.openPage('https://docs.ohstem.vn/'); }},
+        {html: 'OhStem Education', line: false, callback: function() { self.openPage('https://ohstem.vn/'); }},
       ];
       if (simPanel.showFPS) {
         menuItems[6].html = '<span class="tick">&#x2713;</span> ' + menuItems[6].html;
@@ -453,9 +463,9 @@ var main = new function() {
       let menuItems = [
         {html: 'Ev3dev Mode', line: false, callback: self.switchToEv3dev},
         {html: 'Pybricks Mode', line: true, callback: self.switchToPybricks},
-        {html: 'Zoom In', line: false, callback: pythonPanel.zoomIn},
-        {html: 'Zoom Out', line: false, callback: pythonPanel.zoomOut},
-        {html: 'Reset Zoom', line: false, callback: pythonPanel.zoomReset},
+        {html: i18n.get('#zoom_in#'), line: false, callback: pythonPanel.zoomIn},
+        {html: i18n.get('#zoom_out#'), line: false, callback: pythonPanel.zoomOut},
+        {html: i18n.get('#zoom_reset#'), line: false, callback: pythonPanel.zoomReset},
       ];
       var tickIndex;
       if (blockly.generator == ev3dev2_generator) {
