@@ -2363,7 +2363,7 @@ let MSGS = {
     de: 'Entferne diese Seite',
     nl: 'Verwijder huidige pagina',
     he: 'מחק עמוד נוכחי',
-    ru: 'УXóa trang hiện tại',
+    vi: 'Xóa trang hiện tại',
   },
   '#blockly-new_page_name#': {
     en: 'New page name',
