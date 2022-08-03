@@ -52,7 +52,7 @@ var main = new function() {
     blocklyPanel.onActive();
     self.loadProjectName();
 
-    self.showWhatsNew();
+    // self.showWhatsNew();
   };
 
   // Update text already in html
