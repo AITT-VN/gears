@@ -2568,12 +2568,24 @@ let MSGS = {
     en: 'Reset zoom',
     vi: 'Đặt lại thu phóng',
   },
+  '#ohstem_github#': {
+    en: 'GitHub',
+    vi: 'GitHub',
+  },
+  '#ohstem_about#': {
+    en: 'About OhStem',
+    vi: 'Về OhStem',
+  },
+  '#ohstem_docs#': {
+    en: 'Document',
+    vi: 'Tài liệu tham khảo',
+  },
 };
 let MSGS_KEYS = Object.keys(MSGS);
 
 let LANG = localStorage.getItem('LANG');
 if (!LANG || LANG == '' || LANG == 'undefined') {
-  LANG = 'en';
+  LANG = 'vi';
 }
 
 const RTL_LANGS = ['he'];

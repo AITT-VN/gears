@@ -272,8 +272,9 @@ var main = new function() {
       //   {html: i18n.get('#main-display_fps#'), line: false, callback: simPanel.toggleFPS }
       // ];
       let menuItems = [
-        {html: 'Docs', line: false, callback: function() { self.openPage('https://docs.ohstem.vn/'); }},
-        {html: 'OhStem Education', line: false, callback: function() { self.openPage('https://ohstem.vn/'); }},
+        {html: i18n.get('#ohstem_docs#'), line: false, callback: function() { self.openPage('https://docs.ohstem.vn/'); }},
+        {html: i18n.get('#ohstem_github#'), line: false, callback: function() { self.openPage('https://github.com/orgs/AITT-VN/repositories'); }},
+        {html: i18n.get('#ohstem_about#'), line: false, callback: function() { self.openPage('https://ohstem.vn/ve-ohstem-education/'); }},
       ];
       if (simPanel.showFPS) {
         menuItems[6].html = '<span class="tick">&#x2713;</span> ' + menuItems[6].html;
